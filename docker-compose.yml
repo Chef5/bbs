@@ -1,6 +1,6 @@
 version: '3'
 services:
-  discussion:
+  bbs:
     image: chef5/bbs:latest
     container_name: bbs
     # pull_policy: always
@@ -11,16 +11,16 @@ services:
     depends_on:
       - postgres
     environment:
-      DATABASE_URL: 'postgres://discussion-user:discussion-password@postgres/discussion'      
+      DATABASE_URL: 'postgres://bbs-user:bbs-password@postgres/bbs'      
   postgres:
     container_name: postgres
     image: postgres:alpine
     restart: always
     environment:
-      POSTGRES_USER: discussion-user
-      POSTGRES_PASSWORD: discussion-password
-      POSTGRES_DB: discussion
+      POSTGRES_USER: bbs-user
+      POSTGRES_PASSWORD: bbs-password
+      POSTGRES_DB: bbs
     volumes:
-      - discussion-data:/var/lib/postgresql/data
+      - bbs-data:/var/lib/postgresql/data
 volumes:
-  discussion-data:
+  bbs-data:
