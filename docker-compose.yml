@@ -11,15 +11,15 @@ services:
     depends_on:
       - postgres
     environment:
-      DATABASE_URL: 'postgres://bbs-user:bbs-password@postgres/bbs'      
+      DATABASE_URL: 'postgres://discussion-user:discussion-password@postgres/discussion'      
   postgres:
     container_name: postgres
     image: postgres:alpine
     restart: always
     environment:
-      POSTGRES_USER: bbs-user
-      POSTGRES_PASSWORD: bbs-password
-      POSTGRES_DB: bbs
+      POSTGRES_USER: discussion-user
+      POSTGRES_PASSWORD: discussion-password
+      POSTGRES_DB: discussion
     volumes:
       - bbs-data:/var/lib/postgresql/data
 volumes:
