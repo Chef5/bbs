@@ -21,6 +21,6 @@ services:
       POSTGRES_PASSWORD: discussion-password
       POSTGRES_DB: discussion
     volumes:
-      - bbs-data:/var/lib/postgresql/data
+      - discussion-data:/var/lib/postgresql/data
 volumes:
-  bbs-data:
+  discussion-data:
