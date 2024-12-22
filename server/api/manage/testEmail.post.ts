@@ -15,7 +15,7 @@ interface TestEmailRequest {
 
 export default defineEventHandler(async (event) => {
   const request = (await readBody(event)) as TestEmailRequest
-  const message = await sendMailWithParams({ ...request.email, subject: '魔法程序学院-藏宝阁 测试邮件 Test Email', html: '这是一封测试邮件 This is a test email' }, request.url)
+  const message = await sendMailWithParams({ ...request.email, subject: '魔法程序学院 测试邮件 Test Email', html: '这是一封测试邮件 This is a test email' }, request.url)
   if (message) {
     return {
       success: false,

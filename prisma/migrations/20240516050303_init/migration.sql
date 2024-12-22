@@ -248,4 +248,4 @@ ALTER TABLE "PostSupport" ADD CONSTRAINT "PostSupport_uid_fkey" FOREIGN KEY ("ui
 
 INSERT INTO public."SysConfig"
 (id, "content")
-VALUES(1, '{"websiteName": "魔法程序学院-藏宝阁", "pointPerPost": 5, "pointPerComment": 1, "pointPerPostByDay": 20, "websiteAnnouncement": "公告", "pointPerCommentByDay": 20, "pointPerDaySignInMax": 10, "pointPerDaySignInMin": 1, "pointPerLikeOrDislike": 1}'::jsonb);
+VALUES(1, '{"websiteName": "魔法程序学院", "pointPerPost": 5, "pointPerComment": 1, "pointPerPostByDay": 20, "websiteAnnouncement": "公告", "pointPerCommentByDay": 20, "pointPerDaySignInMax": 10, "pointPerDaySignInMin": 1, "pointPerLikeOrDislike": 1}'::jsonb);

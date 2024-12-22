@@ -7,7 +7,7 @@ defineProps({
   siteName: {
     type: String,
     required: true,
-    default: '魔法程序学院-藏宝阁',
+    default: '魔法程序学院',
   },
 })
 const router = useRouter()
@@ -56,7 +56,7 @@ function showSlider() {
       </div>
       <a href="/" class="cursor-pointer hover:text-primary/80">
         <div class="font-semibold text-xl">
-          {{ siteName || "魔法程序学院-藏宝阁" }}
+          {{ siteName || "魔法程序学院" }}
         </div>
       </a>
       <div class="flex items-center gap-1 ml-auto ">
