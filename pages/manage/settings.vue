@@ -35,11 +35,11 @@ const toolbars: ToolbarNames[] = [
 const { data: configData } = await useFetch('/api/manage/config/get', { method: 'POST' })
 
 const state = reactive({
-  websiteName: '魔法程序学院-藏宝阁',
+  websiteName: '魔法程序学院',
   websiteUrl: '',
   webBgimage: '',
-  websiteKeywords: '藏宝阁,魔法程序学院',
-  websiteDescription: '魔法程序学院-藏宝阁',
+  websiteKeywords: '魔法程序学院',
+  websiteDescription: '魔法程序学院',
   favicon: '',
   pointPerPost: 5,
   pointPerPostByDay: 20,

@@ -1,5 +1,6 @@
 # Nuxt 3 builder
-FROM node:22-alpine as builder
+FROM node:20-alpine3.20 as builder
+# RUN apk update && apk add --no-cache openssl
 
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
@@ -29,7 +30,7 @@ RUN echo $VERSION > /app/version
 RUN pnpm run build
 
 # Nuxt 3 production
-FROM node:22-alpine
+FROM node:20-alpine3.20
 RUN corepack enable && corepack prepare pnpm@latest --activate
 ENV PNPM_HOME=/usr/local/bin
 RUN pnpm add --global prisma

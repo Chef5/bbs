@@ -12,8 +12,8 @@ jobs:
         id: version_step
         run: |
           echo "##[set-output name=version;]VERSION=${GITHUB_REF#$"refs/tags/v"}"
-          echo "##[set-output name=version_tag;]chef5/bbs:${GITHUB_REF#$"refs/tags/v"}"
-          echo "##[set-output name=latest_tag;]chef5/bbs:latest"
+          echo "##[set-output name=version_tag;]Chef5/bbs:${GITHUB_REF#$"refs/tags/v"}"
+          echo "##[set-output name=latest_tag;]Chef5/bbs:latest"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
