@@ -14,7 +14,7 @@ services:
       DATABASE_URL: 'postgres://discussion-user:discussion-password@postgres/discussion'      
   postgres:
     container_name: postgres
-    image: hub.mofacode.com/postgres:alpine
+    image: hub.mofacode.com/library/postgres:alpine
     restart: always
     environment:
       POSTGRES_USER: discussion-user
