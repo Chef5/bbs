@@ -1,7 +1,7 @@
 version: '3'
 services:
   bbs:
-    image: chef5/bbs:latest
+    image: hub.mofacode.com/chef5/bbs:latest
     container_name: bbs
     # pull_policy: always
     ports:
@@ -14,7 +14,7 @@ services:
       DATABASE_URL: 'postgres://discussion-user:discussion-password@postgres/discussion'      
   postgres:
     container_name: postgres
-    image: postgres:alpine
+    image: hub.mofacode.com/postgres:alpine
     restart: always
     environment:
       POSTGRES_USER: discussion-user
